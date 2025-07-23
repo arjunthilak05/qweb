@@ -18,12 +18,7 @@ export const AccordionItem = ({ value, children, className }: { value: string; c
   const { open } = context;
   return (
     <div className={`rounded-xl border border-cyan-700/30 bg-gray-900/60 shadow-md transition-all duration-300 ${className || ""}`.replace(/  +/g, ' ')} data-open={open === value}>
-      {React.Children.map(children, child => {
-        if (React.isValidElement(child) && (child.type === AccordionTrigger || child.type === AccordionContent)) {
-          return React.cloneElement(child, { accordionValue: value });
-        }
-        return child;
-      })}
+      {children}
     </div>
   );
 };
