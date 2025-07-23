@@ -21,6 +21,7 @@ import {
   Sparkles,
   Linkedin,
   Github,
+  CheckCircle,
 } from "lucide-react"
 
 export default function QuantumCoursePitch() {
@@ -71,7 +72,6 @@ export default function QuantumCoursePitch() {
     const animateStats = () => {
       const duration = 2000
       const start = Date.now()
-      const targets = { students: 1000, completion: 90, satisfaction: 95 }
 
       const animate = () => {
         const elapsed = Date.now() - start
