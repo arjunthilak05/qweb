@@ -295,7 +295,7 @@ export default function QuantumCoursePitch() {
               Why This Course?
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Bridging the gap between quantum computing&apos;s explosive growth and youth education with
+              Bridging the gap between quantum computing's explosive growth and youth education with
               <span className="text-cyan-400"> cutting-edge pedagogy</span>
             </p>
           </div>
@@ -306,7 +306,7 @@ export default function QuantumCoursePitch() {
                 icon: Target,
                 title: "Market Need",
                 description:
-                  "Quantum computing is booming—projected to be a $8.6 billion industry by 2027—but education lags for youth. This course bridges the gap, aligning with NEP 2020&apos;s focus on flexible, tech-forward learning.",
+                  "Quantum computing is booming—projected to be a $8.6 billion industry by 2027—but education lags for youth. This course bridges the gap, aligning with NEP 2020's focus on flexible, tech-forward learning.",
                 color: "cyan",
                 stat: "$8.6B Market",
               },
@@ -314,7 +314,7 @@ export default function QuantumCoursePitch() {
                 icon: Zap,
                 title: "Unique Selling Points",
                 description:
-                  "Age-appropriate analogies (e.g., quantum bits as &apos;superhero particles&apos;), gamified labs using free tools like Qiskit Playground, and capstone projects where students &apos;build&apos; quantum games.",
+                  "Age-appropriate analogies (e.g., quantum bits as 'superhero particles'), gamified labs using free tools like Qiskit Playground, and capstone projects where students 'build' quantum games.",
                 color: "purple",
                 stat: "100% Gamified",
               },
@@ -395,7 +395,7 @@ export default function QuantumCoursePitch() {
                     week: "Week 1",
                     title: "What is Quantum Computing? (Intro & Motivation)",
                     content: [
-                      "Classical vs. quantum: Compare everyday computers to quantum &apos;magic&apos; with analogies like flipping coins (bits) vs. spinning tops (qubits)",
+                      "Classical vs. quantum: Compare everyday computers to quantum 'magic' with analogies like flipping coins (bits) vs. spinning tops (qubits)",
                       "Fun activity: Interactive demo of superposition using a coin toss game",
                       "Key takeaway: Quantum computers solve problems faster, like cracking codes or simulating molecules",
                     ],
@@ -405,7 +405,7 @@ export default function QuantumCoursePitch() {
                     title: "Meet the Qubit",
                     content: [
                       "Basics of qubits, superposition, and measurement",
-                      "Hands-on: Use online simulators (e.g., IBM Quantum Lab) to &apos;flip&apos; virtual qubits—no coding yet",
+                      "Hands-on: Use online simulators (e.g., IBM Quantum Lab) to 'flip' virtual qubits—no coding yet",
                       "For kids: Storytime with quantum characters; for high school: Intro to probability",
                     ],
                   },
@@ -429,9 +429,9 @@ export default function QuantumCoursePitch() {
                 weeks_data: [
                   {
                     week: "Week 4",
-                    title: "Entanglement – The Quantum &apos;Twin&apos; Effect",
+                    title: "Entanglement – The Quantum 'Twin' Effect",
                     content: [
-                      "Explain entanglement with paired dice or &apos;telepathic&apos; particles",
+                      "Explain entanglement with paired dice or 'telepathic' particles",
                       "Lab: Simulate entangled qubits and discuss applications like secure communication",
                     ],
                   },
@@ -440,7 +440,7 @@ export default function QuantumCoursePitch() {
                     title: "Quantum Gates & Circuits",
                     content: [
                       "Gates like Hadamard and NOT, building simple circuits",
-                      "Activity: Design a &apos;quantum puzzle&apos; circuit; group challenges for high schoolers",
+                      "Activity: Design a 'quantum puzzle' circuit; group challenges for high schoolers",
                     ],
                   },
                   {
@@ -448,7 +448,7 @@ export default function QuantumCoursePitch() {
                     title: "Interference and Algorithms Intro",
                     content: [
                       "How quantum interference enables speedups",
-                      "Basic algorithm: Deutsch&apos;s algorithm via storytelling (e.g., &apos;quantum detective&apos;)",
+                      "Basic algorithm: Deutsch's algorithm via storytelling (e.g., 'quantum detective')",
                       "Lab: Code and run a simple algorithm on a simulator",
                     ],
                   },
@@ -456,8 +456,8 @@ export default function QuantumCoursePitch() {
                     week: "Week 7",
                     title: "Quantum Measurement & Noise",
                     content: [
-                      "Dealing with real-world quantum &apos;noise&apos; and errors",
-                      "Fun twist: Game-ify error correction as a &apos;fix the glitch&apos; challenge",
+                      "Dealing with real-world quantum 'noise' and errors",
+                      "Fun twist: Game-ify error correction as a 'fix the glitch' challenge",
                     ],
                   },
                   {
@@ -481,8 +481,8 @@ export default function QuantumCoursePitch() {
                     week: "Week 9",
                     title: "Quantum Algorithms in Action",
                     content: [
-                      "Grover&apos;s search and basics of Shor&apos;s algorithm (simplified for age groups)",
-                      "Lab: Search for &apos;hidden treasures&apos; in a quantum simulation",
+                      "Grover's search and basics of Shor's algorithm (simplified for age groups)",
+                      "Lab: Search for 'hidden treasures' in a quantum simulation",
                     ],
                   },
                   {
@@ -505,7 +505,7 @@ export default function QuantumCoursePitch() {
                     week: "Week 12",
                     title: "Showcase & Wrap-Up",
                     content: [
-                      "Present projects in a virtual &apos;Quantum Fair&apos;",
+                      "Present projects in a virtual 'Quantum Fair'",
                       "Certificate ceremony, feedback, and next steps (e.g., advanced courses)",
                       "Assessment: Project rubric focusing on creativity and understanding",
                     ],
@@ -580,7 +580,7 @@ export default function QuantumCoursePitch() {
               </h2>
               <p className="text-lg text-gray-300">
                 Ready to revolutionize quantum education? <br />
-                <span className="text-cyan-400 font-semibold">Let&apos;s discuss this opportunity.</span>
+                <span className="text-cyan-400 font-semibold">Let's discuss this opportunity.</span>
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-2xl border border-cyan-400/20 rounded-3xl shadow-2xl p-10 animate-fade-in text-center space-y-8">
