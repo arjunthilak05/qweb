@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from "react"
 
-const AccordionContext = createContext<any>(null)
+const AccordionContext = createContext<unknown>(null)
 
 export const Accordion = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState<string | null>(null)
