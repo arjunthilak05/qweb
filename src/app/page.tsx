@@ -540,7 +540,7 @@ export default function QuantumCoursePitch() {
                 <Accordion className="w-full">
                   {phase.weeks_data.map((week, weekIndex) => (
                     <AccordionItem key={weekIndex} value={`${phaseIndex}-${weekIndex}`} className="border-gray-600/50">
-                      <AccordionTrigger className="text-white hover:text-cyan-400 transition-colors duration-300 text-left">
+                      <AccordionTrigger accordionValue={`${phaseIndex}-${weekIndex}`} className="text-white hover:text-cyan-400 transition-colors duration-300 text-left">
                         <div className="flex items-center gap-3">
                           <Badge variant="outline" className="border-gray-600 text-gray-400">
                             {week.week}
@@ -548,7 +548,7 @@ export default function QuantumCoursePitch() {
                           <span>{week.title}</span>
                         </div>
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-300">
+                      <AccordionContent accordionValue={`${phaseIndex}-${weekIndex}`} className="text-gray-300">
                         <ul className="space-y-3 list-none">
                           {week.content.map((item, itemIndex) => (
                             <li key={itemIndex} className="flex items-start gap-3">
