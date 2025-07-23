@@ -537,7 +537,7 @@ export default function QuantumCoursePitch() {
                   </div>
                 </h3>
 
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion className="w-full">
                   {phase.weeks_data.map((week, weekIndex) => (
                     <AccordionItem key={weekIndex} value={`${phaseIndex}-${weekIndex}`} className="border-gray-600/50">
                       <AccordionTrigger className="text-white hover:text-cyan-400 transition-colors duration-300 text-left">

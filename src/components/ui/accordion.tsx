@@ -3,11 +3,11 @@ import React, { createContext, useContext, useState, ReactNode } from "react"
 type AccordionContextType = { open: string | null; setOpen: (v: string | null) => void };
 const AccordionContext = createContext<AccordionContextType | undefined>(undefined);
 
-export const Accordion = ({ children }: { children: ReactNode }) => {
+export const Accordion = ({ children, className = "" }: { children: ReactNode; className?: string }) => {
   const [open, setOpen] = useState<string | null>(null);
   return (
     <AccordionContext.Provider value={{ open, setOpen }}>
-      <div className="space-y-4">{children}</div>
+      <div className={`space-y-4 ${className}`}>{children}</div>
     </AccordionContext.Provider>
   );
 };
