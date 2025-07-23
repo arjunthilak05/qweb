@@ -1,36 +1,42 @@
 import React, { createContext, useContext, useState, ReactNode } from "react"
 
-const AccordionContext = createContext<unknown>(null)
+type AccordionContextType = { open: string | null; setOpen: (v: string | null) => void };
+const AccordionContext = createContext<AccordionContextType | undefined>(undefined);
 
 export const Accordion = ({ children }: { children: ReactNode }) => {
-  const [open, setOpen] = useState<string | null>(null)
+  const [open, setOpen] = useState<string | null>(null);
   return (
     <AccordionContext.Provider value={{ open, setOpen }}>
       <div className="space-y-4">{children}</div>
     </AccordionContext.Provider>
-  )
-}
+  );
+};
 
 export const AccordionItem = ({ value, children, className }: { value: string; children: ReactNode; className?: string }) => {
-  const { open } = useContext(AccordionContext)
+  const context = useContext(AccordionContext);
+  if (!context) throw new Error('AccordionItem must be used within Accordion');
+  const { open } = context;
   return (
     <div className={`rounded-xl border border-cyan-700/30 bg-gray-900/60 shadow-md transition-all duration-300 ${className || ""}`.replace(/  +/g, ' ')} data-open={open === value}>
-      {React.Children.map(children, child =>
-        React.isValidElement(child)
-          ? React.cloneElement(child, { accordionValue: value })
-          : child
-      )}
+      {React.Children.map(children, child => {
+        if (React.isValidElement(child) && (child.type === AccordionTrigger || child.type === AccordionContent)) {
+          return React.cloneElement(child, { accordionValue: value });
+        }
+        return child;
+      })}
     </div>
-  )
-}
+  );
+};
 
 export const AccordionTrigger = ({ children, accordionValue, className }: { children: ReactNode; accordionValue?: string; className?: string }) => {
-  const { open, setOpen } = useContext(AccordionContext)
-  const isOpen = open === accordionValue
+  const context = useContext(AccordionContext);
+  if (!context) throw new Error('AccordionTrigger must be used within Accordion');
+  const { open, setOpen } = context;
+  const isOpen = open === accordionValue;
   return (
     <button
       className={`w-full flex items-center justify-between px-6 py-4 text-lg font-semibold text-left text-white hover:text-cyan-400 transition-colors duration-300 ${className || ""}`.replace(/  +/g, ' ')}
-      onClick={() => setOpen(isOpen ? null : accordionValue)}
+      onClick={() => setOpen(isOpen ? null : accordionValue || null)}
       aria-expanded={isOpen}
     >
       <span>{children}</span>
@@ -38,12 +44,14 @@ export const AccordionTrigger = ({ children, accordionValue, className }: { chil
         ▼
       </span>
     </button>
-  )
-}
+  );
+};
 
 export const AccordionContent = ({ children, accordionValue, className }: { children: ReactNode; accordionValue?: string; className?: string }) => {
-  const { open } = useContext(AccordionContext)
-  const isOpen = open === accordionValue
+  const context = useContext(AccordionContext);
+  if (!context) throw new Error('AccordionContent must be used within Accordion');
+  const { open } = context;
+  const isOpen = open === accordionValue;
   return (
     <div
       className={`px-8 pb-6 overflow-hidden transition-all duration-500 ease-in-out ${
@@ -54,5 +62,5 @@ export const AccordionContent = ({ children, accordionValue, className }: { chil
     >
       {children}
     </div>
-  )
-} 
+  );
+}; 
